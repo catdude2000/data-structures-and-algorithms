@@ -87,7 +87,11 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
-
+objs.sort((a, b) = > {
+  if (a.price < b.price) {return -1; }
+  if (a.price > b.price) {return +1; }
+  else { return 0; }
+})
 const sortByPrice = (arr) => {
   // Solution code here...
 };
