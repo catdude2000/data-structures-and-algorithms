@@ -21,21 +21,28 @@ For example:
 
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
-
+const reverseString = (str) => {
+  return str.split(' ').reverse().join(' ');
+};
 const getNames = (arr) => {
-  let people = [
-    {
-      name: 'lloyd',
-      age: 32,
-      shoeSize: 12
-    },
-    {
-      name: 'jamie',
-      age: 21,
-      shoeSize: 8
+  return arr.map(
+    (person) => {
+      return reverseString(person.name);
     }
-    ]
-    people (name.state)
+  );
+  // let people = [
+  //   {
+  //     name: 'lloyd',
+  //     age: 32,
+  //     shoeSize: 12
+  //   },
+  //   {
+  //     name: 'jamie',
+  //     age: 21,
+  //     shoeSize: 8
+  //   }
+  //   ]
+  //   people (name.state)
   // Solution code here...
 };
 
@@ -47,6 +54,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
+  return str + ' The end.';
   // Solution code here...
 };
 
@@ -64,6 +72,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
+  arr.push(arr[0]);
   // Solution code here...
 };
 
@@ -83,6 +92,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
+  obj.yearBorn = year;
   // Solution code here...
 };
 
@@ -100,6 +110,7 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
+
   // Solution code here...
 };
 
