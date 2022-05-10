@@ -77,11 +77,24 @@ const addValues = (arr, value) => {
   arr.push(value);
 };
 
+
+/**
+ * Then, write a function named addNumbers that takes in four arguments:
+  - A number to be added to an array
+  - An array into which the number should be added
+  - The number of times the number should be added
+  - A callback function to use to add the numbers to the array (Hint: you already defined it)
+Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
+ * @param {*} num number to append to array 
+ * @param {*} arr array
+ * @param {*} times times invoked
+ * @param {*} callback previous function
+ * @returns modified array
+ */
 const addNumbers = (num, arr, times, callback) => {
-  // let newArray = [];
-  arr.forEach((num) =>{
-    arr.push(callback(num));
-  });
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
   return arr;
 };
 
@@ -100,7 +113,14 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let finalList = [];
+  availableItems.forEach((item) => {
+    if (item.available){
+      finalList.push(item.name);
+    }
+  });
+
+  return finalList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,7 +176,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
