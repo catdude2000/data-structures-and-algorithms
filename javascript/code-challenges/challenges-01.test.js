@@ -78,11 +78,11 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // let newArray = [];
+  let newArray = [];
   arr.forEach((num) =>{
-    arr.push(callback(num));
+    newArray.push(callback(num)times);
   });
-  return arr;
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
