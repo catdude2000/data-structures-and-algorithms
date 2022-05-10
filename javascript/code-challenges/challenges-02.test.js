@@ -31,7 +31,7 @@ const addOne = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character.
+Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character. 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
