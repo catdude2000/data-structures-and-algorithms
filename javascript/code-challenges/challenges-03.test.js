@@ -6,7 +6,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  // Solution code here...
+  let addArray = [];
+  for (let i = 0; i < arr.length; i++){
+    addArray.push(arr[i] + 2);
+
+  }
+  return addArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -15,8 +20,16 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
+/**
+ *
+ * @param {array} arr - numbers and words
+ * @returns  {array} just numbers
+ */
 const typeNum = (arr) => {
-  // Solution code here...
+  const filtArray = arr.filter(element => {
+    return !isNaN(element);
+  });
+  return filtArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +39,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  const andArray = arr.filter(element => {
+    return element.includes('and');
+
+  });
+  return andArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +53,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  const oddArray = arr.filter(element => {
+    return !(element%2===0);
+  });
+  return oddArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +66,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  const incArray = arr.filter(element => !forbiddenValues.includes(element)
+
+  );
+  return incArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -169,13 +192,13 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-08.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should add two to every value', () => {
     expect(addTwo([1, 2, 4])).toStrictEqual([3, 4, 6]);
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array containing only numbers', () => {
     expect(typeNum([1, 'bob', 3])).toStrictEqual([1, 3]);
     expect(typeNum([1, 'bob', 3]).length).toStrictEqual(2);
@@ -184,7 +207,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return an array of strings containing the word and', () => {
     expect(containsAnd(['panda', 'ran', 'and'])).toStrictEqual(['panda', 'and']);
     expect(containsAnd(['banana','bob','xyz'])).toStrictEqual([]);
@@ -193,7 +216,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return an array containing only odd integers', () => {
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([1, 3, 5, 7, 9]);
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).length).toStrictEqual(5);
@@ -202,7 +225,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   const firstNums = [1, 2, 3];
   const secondNums = [1, 2, 3, 4];
 
