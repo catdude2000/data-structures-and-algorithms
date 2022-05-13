@@ -12,8 +12,9 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  return people.map(() => {
-    return
+  console.log(people.lastName);
+  return people.map((person) => {
+    return `${person.firstName} ${person.lastName}`;
   });
 
 };
@@ -26,7 +27,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  return arr.reduce((val1, val2) => val1 + val2, 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -292,7 +294,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
@@ -300,7 +302,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
     expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
