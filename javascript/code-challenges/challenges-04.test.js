@@ -31,7 +31,7 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-   arr.sort((a,b) => a-b);
+  return arr.sort((a,b) => a-b);
 };
 
 
@@ -42,7 +42,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  if(arr)
+  return arr.sort((a,b) => a-b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +52,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  return arr.sort((a,b) => b-a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,9 +78,14 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a.price - b.price);
+  // let prArray = [];
+  // for (let i = 0; i < arr.length; i++){
+  //   arr.sort(arr[i].price);
+  // }
+  // return prArray;
 };
-
+// return arr.sort((a,b) => b-a);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 Write a function named alphabetizeBetter that takes in an array of strings and returns the same array, with the strings sorted alphabetically. Capitalization should not change the sort order of two strings.
@@ -203,13 +208,13 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should sort low-to-high the numbers in an array', () => {
     expect(sortNumbers([8, 3, 2, 9, 12, 1, 115])).toStrictEqual([1, 2, 3, 8, 9, 12, 115]);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should sort high-to-low the numbers in an array', () => {
     const nums = [3,4,5,6,7];
     expect(sortBackwards(nums)).toStrictEqual([7,6,5,4,3]);
@@ -228,7 +233,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should sort items by their price', () => {
     expect(sortByPrice([
       {name: 'Sweatshirt', price: 45},
