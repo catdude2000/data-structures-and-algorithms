@@ -59,7 +59,7 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  
+  arr.reduce((a, b) => (b === a + 1 : a), 0);
   // Solution code here...
 };
 
@@ -124,7 +124,7 @@ const returnNames = (arr) => {
   return arr.map((person) => {
     return `${person.name}`;
   });
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,8 +136,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  return str.reduce((rev, char) =>
-    char + rev, '');
+  const array = str.split(''); //??
+  const reversed = array.reduce((rev, char) => {
+    return char + rev;
+  }, '');
+  return reversed;
 };
 
 /* ------------------------------------------------------------------------------------------------
