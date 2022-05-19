@@ -1,321 +1,316 @@
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 1 - Review
-Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
------------------------------------------------------------------------------------------------- */
 
-let starWarsPeople = [
+CHALLENGE 1 - Review
+
+Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
+
+------------------------------------------------------------------------------------------------ */
+let characters = [
   {
-    name: 'C-3PO',
-    height: '167',
-    eye_color: 'yellow'
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark'
   },
   {
-    name: 'Luke Skywalker',
-    height: '172',
-    eye_color: 'blue'
+    name: 'Jon A.',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn'
   },
   {
-    name: 'R2-D2',
-    height: '96',
-    eye_color: 'red'
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister'
   },
+  {
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen'
+  },
+  {
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell'
+  },
+  {
+    name: 'Jon S.',
+    spouse: null,
+    children: [],
+    house: 'Snow'
+  },
+  {
+    name: 'Euron',
+    spouse: null,
+    children: [],
+    house: 'Greyjoy'
+  }
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
+const sortByChildren = (charArray) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
------------------------------------------------------------------------------------------------- */
 
-const removeThree = (idx, arr) => {
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+
+------------------------------------------------------------------------------------------------ */
+// regular expressions\/\/\/\/
+const containsW = (str) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
+
+Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+
+For example:
+12345 returns true
+'12345' returns true
+'h3llo world' returns true
+'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
+const isNum = (input) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-Write a function named howMuchPencil that takes in a string, as written on the side of a pencil.
-As you sharpen the pencil, the string will become shorter and shorter, starting by removing the first letter.
-Your function should use slice within a loop and return an array of each successive string result from losing letters to the sharpener, until nothing is left.
-For example, if the input is 'Welcome', the output will be:
-['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
+
+Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+
 ------------------------------------------------------------------------------------------------ */
 
-const howMuchPencil = (str) => {
-  let result = [];
+const containsWorld = (input) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
-Write a function name wordsToCharList that, given a string as input, returns a new array where every element is a character of the input string.
-For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
+
+Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
+
+Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
+const isCapitalized = (str) => {
   // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
-You are making a grocery list for ingredients needed in the gruffalo crumble recipe, below. Rather than taking the entire recipe, you only want a list of the item names.
-Write a function named listFoods that takes in the recipe and returns a new array of the food items without any amount or units. Just the name. For example, '1 cup flour' will return 'flour'.
-Use slice for this function, maybe more than once. The Array.indexOf() method may also be helpful.
-Do not use split for this function.
+
+Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const gruffaloCrumble = {
-  name: 'How to make a Gruffalo Crumble',
-  ingredients: [
-    '1 medium-sized Gruffalo',
-    '8 pounds oats',
-    '2 pounds brown sugar',
-    '4 pounds flour',
-    '2 gallons pure maple syrup',
-    '16 cups chopped nuts',
-    '1 pound baking soda',
-    '1 pound baking powder',
-    '1 pound cinnamon',
-    '6 gallons melted butter',
-    '2 gallons fresh water',
-  ],
-  steps: [
-    'Pre-heat a large oven to 375',
-    'De-prickle the gruffalo',
-    'Sprinkle with cinnamon, sugar, flour, and nuts',
-    'Mix until evenly distributed',
-    'Grease a 3-foot x 3-foot casserole dish',
-    'Combine gruffalo compote with water to maintain moisture in the oven',
-    'Fold together remaining ingredients to make the crisp',
-    'Spread the crisp evenly over the gruffalo mixture',
-    'Bake for 12-15 hours',
-  ],
-};
-
-
-const listFoods = (recipe) => {
-  let result = [];
+const citiesAtoJ = (arr) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
-Write a function named splitFoods that uses split to produce the same output as Challenge 6.
-You may also use other string or array methods.
+
+You have created a game application and begin by asking users an easy question: In which month is Halloween?
+
+Write a function named matchMonth which uses a regular expression pattern to match any of these inputs: October, Oct, october, oct
+
+If the user enters any of these four inputs, return true. For any other input, return false.
+
+Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const splitFoods = (recipe) => {
-  let result = [];
+const matchMonth = (input) => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
-Use the same recipe from Challenge 6, above.
-Write a function named stepAction that takes in the recipe and extracts the action verbs from the steps. Fortunate for you, the action verbs are the first word of each action.
-Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
+
+Write a function named noPunctuation that contains a regular expression pattern to find all of the words that contain a space immediately at the end of the word. Return an array of all such words, still containing the space at the end.
+
+For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
+
+The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const stepActions = (recipe) => {
-  let result = [];
+const noPunctuation = str => {
   // Solution code here...
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
-Write a function named removeEvenValues that, given an array of integers as input, deletes all even values from the array, leaving no 'gaps' behind.
-The array should be modified in-place.
-For example:
-  const integers = [1, 2, 3, 4, 5, 6];
-  removeEvenValues(integers);
-  console.log(integers) will print [1, 3, 5]
+
+You want to teach a friend how to play hangman and want to show them using a partially complete puzzle.
+
+Write a function named hangman which uses the replace method to remove all of the vowels (a, e, i, o, u) from the hangman string, regardless of capitalization, and replace them with an underscore.
+
+The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
+
+For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
-const removeEvenValues = (arr) => {
+let hangman = (str) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
-Write a function named removeLastCharacters that takes in a string and a number. The numberOfCharacters argument determines how many characters will be removed from the end of the string. Return the resulting string.
-If the numberOfCharacters argument is greater than the length of the input string, the function should return an empty string.
-If the numberOfCharacters argument input is a negative number, the function should return the input string without any changes.
-For example:
-removeLastCharacters('Gregor', 2) returns 'Greg'
-removeLastCharacters('Gregor', -2) returns 'Gregor'
-removeLastCharacters('Gregor', 9) returns ''
+
+Write a function named findShells that takes in the string below and uses a regular expression pattern to find all instances of the following words: "sells", "shells", "seashells".
+
+Do not use the vertical bar (pipe) character.
+
+Hint: All of these words end with the letters "ells".
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
-};
+const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 11 - Stretch Goal
-Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
------------------------------------------------------------------------------------------------- */
-
-const totalSumCSV = (str) => {
-  let total = 0;
-  // Solution code here...
-  return total;
-};
-
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 12 - Stretch Goal
-Write a function named removeVowels that takes in a string and returns a new string where all the vowels of the original string have been removed.
-For example, removeVowels('gregor') returns 'grgr'.
------------------------------------------------------------------------------------------------- */
-
-const removeVowels = (str) => {
-  // Solution code here...
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 13 - Stretch Goal
-Write a function named extractVowels that takes in a string and returns an array where the first element is the original string with all the vowels removed, and the second element is a string of all the vowels that were removed, in alphabetical order.
-For example, extractVowels('gregor') returns ['grgr', 'eo'].
-Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioou']
------------------------------------------------------------------------------------------------- */
-
-const extractVowels = (str) => {
+const findShells = (str) => {
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
+
 All the code below will verify that your functions are working to solve the challenges.
+
 DO NOT CHANGE any of the below code.
-Run your tests from the console: jest challenges-05.test.js
+
+Run your tests from the console: jest challenges-04.solution.test.js
+
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
-  test('It should sort the star wars characters by height from tallest to shortest', () => {
-    expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
-    expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  })
-});
-
-describe('Testing challenge 2', () => {
-  test('It should return an array with three items removed', () => {
-    expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
+xdescribe('Testing challenge 1', () => {
+  test('It should sort the characters by number of children', () => {
+    expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
+    expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
 
-describe('Testing challenge 3', () => {
-  test('It should join an array', () => {
-    expect(joinArray(['hello', '301', 'students'])).toStrictEqual('hello 301 students');
+xdescribe('Testing challenge 2', () => {
+  test('It should return true if the input contains a lower case w', () => {
+    expect(containsW('hello world')).toBe(true);
+  });
+  test('It should return false if the input contains an upper case W', () => {
+    expect(containsW('Hello World')).toBe(false);
+  });
+  test('It should return false if the input does not contain a w', () => {
+    expect(containsW('hello everyone')).toBe(false);
   });
 });
 
-describe('Testing challenge 4', () => {
-  test('It should return a list of shortening words', () => {
-    expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
-    expect(howMuchPencil('Welcome').length).toStrictEqual(8);
-    expect(howMuchPencil('')).toStrictEqual(['']);
-    expect(howMuchPencil('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
+xdescribe('Testing challenge 3', () => {
+  test('It should return true if the input is a number', () => {
+    expect(isNum(1234567890)).toBeTruthy();
+    expect(isNum('12345')).toBeTruthy();
+  });
+  test('It should return true if the input contains a number', () => {
+    expect(isNum('h3llo w0rld')).toBeTruthy();
+  });
+  test('It should return false if the input does not contain a number', () => {
+    expect(isNum('hello world')).toBeFalsy();
+    expect(isNum('')).toBeFalsy();
   });
 });
 
-describe('Testing challenge 5', () => {
-  test('It should return an array of individual letters', () => {
-    expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
-    expect(wordsToCharList('Gregor').length).toStrictEqual(6);
-    expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
-    expect(wordsToCharList('')).toStrictEqual([]);
+xdescribe('Testing challenge 4', () => {
+  test('It should return true if the input contains the word "world" in lower case', () => {
+    expect(containsWorld('hello world')).toBe(true);
+  });
+  test('It should return false if the input contains the word "world" with any upper case letters', () => {
+    expect(containsWorld('Hello World')).toBe(false);
+  });
+  test('It should return false if the input does not contain the word "world"', () => {
+    expect(containsWorld('hello everyone')).toBe(false);
   });
 });
 
-describe('Testing challenge 6', () => {
-  test('It should return a list of foods', () => {
-    expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
-    expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
+xdescribe('Testing challenge 5', () => {
+  test('It should only return words that begin with a capital letter', () => {
+    const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
+
+    expect(capitalResult).toStrictEqual(['We', 'Return', 'Words', 'With', 'Letter']);
+    expect(capitalResult.length).toStrictEqual(5);
+
+    expect(isCapitalized('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toStrictEqual(['Given', 'Runnymede', 'Windsor', 'Staines', 'June', 'May']);
+
+    expect(isCapitalized('these words are all failures')).toStrictEqual([]);
+  });
+});
+
+xdescribe('Testing challenge 6', () => {
+  let cities = ['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
+
+  test('It should return the cities whose names begin with the letters A through J', () => {
+    expect(citiesAtoJ(cities)).toContain('Cleveland', 'Birmingham', 'Austin', 'Boston', 'Hoboken');
+    expect(citiesAtoJ(cities).length).toStrictEqual(5);
+
+    expect(citiesAtoJ([])).toStrictEqual([]);
+    expect(citiesAtoJ(['Albuquerque', 'Chicago', 'Philadelphia', 'Newark', 'Sacramento', 'Eugene'])).toEqual(expect.arrayContaining(['Albuquerque', 'Chicago', 'Eugene']));
+  });
+
+  test('It should not return the cities whose names begin with the letters K through Z', () => {
+    expect(citiesAtoJ(cities)).not.toContain('San Diego', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Newport Beach');
   });
 });
 
 xdescribe('Testing challenge 7', () => {
-  test('It should return a list of foods', () => {
-    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+  test('It should match any of the acceptable inputs', () => {
+    expect(matchMonth('Oct')).toBeTruthy();
+    expect(matchMonth('oct')).toBeTruthy();
+    expect(matchMonth('October')).toBeTruthy();
+    expect(matchMonth('october')).toBeTruthy();
+  });
+
+  test('It should not match anything other than the acceptable inputs', () => {
+    expect(matchMonth('November')).toBeFalsy();
+    expect(matchMonth('nov')).toBeFalsy();
+    expect(matchMonth(123)).toBeFalsy();
+    expect(matchMonth('octob')).toBeFalsy();
+    expect(matchMonth('OCTOBER')).toBeFalsy();
+    expect(matchMonth('notOctober')).toBeFalsy();
   });
 });
 
 xdescribe('Testing challenge 8', () => {
-  test('It should return a list of recipe steps', () => {
-    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
-    expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
+  const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
+
+  test('It should only return words that are immediately followed by a space', () => {
+    expect(noPunctuation(lorem)).toStrictEqual(['Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ']);
+    expect(noPunctuation(lorem).length).toStrictEqual(23);
+    expect(noPunctuation('Given by our hand in the meadow that is called Runnymede, between Windsor and Staines, on the fifteenth day of June in the seventeenth year of our reign (i.e. 1215: the new regnal year began on 28 May).')).toEqual(expect.arrayContaining(['Given ', 'by ', 'our ', 'hand ', 'in ', 'the ', 'meadow ', 'that ', 'is ', 'called ', 'between ', 'Windsor ', 'and ', 'on ', 'the ', 'fifteenth ', 'day ', 'of ', 'June ', 'in ', 'the ', 'seventeenth ', 'year ', 'of ', 'our ', 'reign ', 'the ', 'new ', 'regnal ', 'year ', 'began ', 'on ', '28 ']));
+  });
+
+  test('It should not contain words that are followed by any non-space character', () => {
+    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
   });
 });
 
 xdescribe('Testing challenge 9', () => {
-  test('It should remove the even numbers from the array', () => {
-    let list = [1, 2, 3, 4, 5, 6];
-    removeEvenValues(list);
-    expect(list).toStrictEqual([1, 3, 5]);
+  let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
 
-    list = [6, 3, 19, 43, 12, 66, 43];
-    removeEvenValues(list);
-    expect(list).toStrictEqual([3, 19, 43, 43]);
-    expect(list.length).toStrictEqual(4);
+  test('It should remove the vowels from the hangman string and replace them with underscores', () => {
+    expect(hangman(startString)).toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
+    expect(hangman('I wAnt them all tO bE removed and replaced with Underscores.')).toStrictEqual('_ w_nt th_m _ll t_ b_ r_m_v_d _nd r_pl_c_d w_th _nd_rsc_r_s.');
+  });
+
+  test('It should not contain the letters "a", "e", "i", "o", or "u"', () => {
+    expect(hangman(startString)).not.toContain('a', 'e', 'i', 'o', 'u');
   });
 });
 
 xdescribe('Testing challenge 10', () => {
-  test('It should shorten the string based on the first argument', () => {
-    expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
-    expect(removeLastCharacters('Gregor', 2).length).toStrictEqual(4);
-  });
-  test('It should return the complete string when passed a negative number', () => {
-    expect(removeLastCharacters('hello', -1)).toStrictEqual('hello');
-    expect(removeLastCharacters('wowow', -700)).toStrictEqual('wowow');
-  });
-  test('It should return an empty string when called with a number larger than the string length', () => {
-    expect(removeLastCharacters('hello', 12)).toStrictEqual('');
-    expect(removeLastCharacters('', 1)).toStrictEqual('');
-    expect(removeLastCharacters('a', 1)).toStrictEqual('');
-  });
-});
-
-xdescribe('Testing challenge 11', () => {
-  test('It should add up the numbers contained within the string', () => {
-    expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
-    expect(totalSumCSV('147')).toStrictEqual(147);
-  });
-});
-
-xdescribe('Testing challenge 12', () => {
-  test('It should return the string without vowels', () => {
-    expect(removeVowels('gregor')).toStrictEqual('grgr');
-    expect(removeVowels('gregor').length).toStrictEqual(4);
-    expect(removeVowels('asdf')).toStrictEqual('sdf');
-    expect(removeVowels('why')).toStrictEqual('why');
-  });
-});
-
-xdescribe('Testing challenge 13', () => {
-  test('It should return the string without vowels', () => {
-    expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
-    expect(extractVowels('gregor').length).toStrictEqual(2);
-
-    expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
+  test('It should return an array of instances of "sells", shells", and "seashells"', () => {
+    expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
+    expect(findShells(seashells).length).toStrictEqual(9);
   });
 });
