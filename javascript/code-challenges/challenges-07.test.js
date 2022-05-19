@@ -24,7 +24,9 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
+  console.log(typeof(height));
+  return starWarsArr.sort((a, b) => parseInt(b.height) - parseInt(a.height));
+  // });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,7 +35,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  // if(arr[idx])
+  arr.filter(arr[idx], arr[idx + 1], arr[idx + 2]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,14 +212,14 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-05.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
   })
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array with three items removed', () => {
     expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
   });
