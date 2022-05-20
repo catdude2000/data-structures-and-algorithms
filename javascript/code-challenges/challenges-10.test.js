@@ -221,7 +221,7 @@ xdescribe('Testing challenge 1', () => {
     expect(returnTen('hello world')).toStrictEqual(['e','l','l','o',' ','w','o','r','l','d']);
     expect(returnTen('world')).toStrictEqual(['w','o','r','l','d']);
   });
-});
+}); 
 
 xdescribe('Testing challenge 2', () => {
   test('It should return the max value', () => {
