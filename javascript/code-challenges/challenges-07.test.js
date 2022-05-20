@@ -128,7 +128,7 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   //Object.ingredients (object right?)gives array we need
-  //use string.indexof instead or array
+  //use string.indexof instead of array
   //pos=str.indexOf(' ')  gives pos 2
   //pos2= str.indexOf(' ', pos +1)
   //ingredients=str.slice(pos2)
