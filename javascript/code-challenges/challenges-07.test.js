@@ -127,7 +127,12 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  //Object.ingredients (object right?)gives array we need
+  //use string.indexof instead or array
+  //pos=str.indexOf(' ')  gives pos 2
+  //pos2= str.indexOf(' ', pos +1)
+  //ingredients=str.slice(pos2)
+  //ingredients=str.slice(pos2)
   return result;
 };
 
@@ -139,6 +144,7 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
+  //result=str.split(' ',) slice? join
   // Solution code here...
   return result;
 };
