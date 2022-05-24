@@ -131,7 +131,7 @@ const listFoods = (recipe) => {
   let pos=gruffaloCrumble.ingredients.str.indexOf(' ');
   //use string.indexof instead of array
   //pos=str.indexOf(' ')  gives pos 2
-  let pos2=gruffaloCrumble.ingredients.indexOf(' ', pos + 1);
+  let pos2=gruffaloCrumble.ingredients.str.indexOf(' ', pos + 1);
   //pos2= str.indexOf(' ', pos +1)
   let ingredients = gruffaloCrumble.ingredients.slice(pos2);
   result.push(ingredients);
