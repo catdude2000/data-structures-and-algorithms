@@ -89,10 +89,13 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  const initArray = input.filter(num => num%5===1);
+  //need to filter type typeof='number' then use mod (%)
+  //need to target specific arrays use map
+  //nested map eventually
+  const initArray = input.filter(num => num%5===0);
   const finalArray = [];
   // for (let i = 0; i<initArray.length; i++){
-    finalArray.push(Math.pow(initArray, 2));
+  finalArray.push(Math.pow(initArray, 2));
   // }
   return finalArray;
 };
