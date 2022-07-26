@@ -9,7 +9,11 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  // Solution code here...
+  let newArray = [];
+  arr.forEach((element) => {
+    newArray.push(Math.pow(element, 3));
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,7 +23,8 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
+  let newArray2=arr.map(ele => ele + 1);
+  return newArray2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +39,8 @@ array containing each string followed by a question mark character.
  * 
  */
 const addQuestion = (arr) => {
+  let newArray3=arr.map(ele => ele + '?');
+  return newArray3;
   // Solution code here...
 };
 
@@ -48,6 +55,9 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
+  for (let i=0; i<arr.length; i++){
+    
+  }
   // Solution code here...
 };
 
@@ -255,7 +265,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -266,7 +276,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-describe('Testing challenge 6', () => {
+xdescribe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
