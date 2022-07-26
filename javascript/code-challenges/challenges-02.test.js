@@ -55,9 +55,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
+  let newArray4 = [];
   for (let i=0; i<arr.length; i++){
-    
+    newArray4.push(Math.pow(2, arr[i]));
   }
+  return newArray4;
   // Solution code here...
 };
 
@@ -68,7 +70,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let newArray5 = [];
+  arr.forEach((element) =>{
+    newArray5.push(Math.pow(2, element));
+  });
+  return newArray5;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,7 +84,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let newArray6=arr.map(ele => Math.pow(2, ele));
+  return newArray6;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -265,7 +272,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(forEachTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forEachTwoToThe([0, 4, 5]).length).toStrictEqual(3);
@@ -276,7 +283,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return two raised to the power of the integer', () => {
     expect(mapTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(mapTwoToThe([0, 4, 5]).length).toStrictEqual(3);
