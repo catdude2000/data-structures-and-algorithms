@@ -9,11 +9,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  let newArray = [];
-  arr.forEach((element) => {
-    newArray.push(Math.pow(element, 3));
-  });
-  return newArray;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,21 +19,22 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  const addArray = arr.map(x => x + 1);
-  return addArray;
+  // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named addQuestion that, given an array of strings, uses map to return a new array containing each string followed by a question mark character. 
+Write a function named addQuestion that, given an array of strings, uses map to return a new 
+
+array containing each string followed by a question mark character.
 ------------------------------------------------------------------------------------------------ */
 
+/**
+ * 
+ */
 const addQuestion = (arr) => {
-  return arr.map((string) => {
-    return string + '?';
-  });
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,11 +48,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  let raisArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    raisArray.push(Math.pow(2, arr[i]));
-  }
-  return raisArray;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,13 +58,8 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  let raisArray = [];
-  arr.forEach(element => {
-    raisArray.push(Math.pow(2, element));
-  });
-  return raisArray;
+  // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -80,9 +68,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  return arr.map((element) =>{
-    return Math.pow(2, element);
-  });
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +104,8 @@ CHALLENGE 9 - Stretch Goal
 
 Use the snorlaxAbilities data, below, for this challenge.
 
-Write a function named extractAbilities that, given the array of abilities, uses map to create an array containing only the ability name.
+Write a function named extractAbilities that, given the array of abilities, uses 
+map to create an array containing only the ability name.
 
 Note: Because this function is expecting the array of abilities, it will be invoked as:
 extractAbilities(snorlaxAbilities.abilities)
@@ -155,8 +142,15 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
+/**
+ * Write a function named extractAbilities that, given the array of abilities, uses 
+ * map to create an array containing only the ability name.*
+ */
 const extractAbilities = (arr) => {
   // Solution code here...
+  return arr.map( (item) => {
+    return item.ability.name;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -164,7 +158,8 @@ CHALLENGE 10 - Stretch Goal
 
 Use the snorlaxStats data, below, for this challenge.
 
-Write a function named extractStats that, given an array of stats, uses map to return an array of objects containing the stat name and the total.
+Write a function named extractStats that, given an array of stats, 
+uses map to return an array of objects containing the stat name and the total.
 
 The total should be the sum of the effort and the baseStat.
 
@@ -202,8 +197,22 @@ const snorlaxStats = {
   weight: 4600,
 };
 
+/**
+ * Write a function named extractStats that, given an array of stats, 
+uses map to return an array of objects containing the stat name and the total.
+
+The total should be the sum of the effort and the baseStat.
+
+Here is an example of a single array element: { name: 'speed', total: 35 }
+
+ * @param {array} arr 
+@returns array of objects with name and total
+ */
 const extractStats = (arr) => {
   // Solution code here...
+  return arr.map( (item)=>{
+    return {name:item.stat.name, total: item.baseStat + item.effort};
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
