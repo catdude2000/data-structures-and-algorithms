@@ -2,80 +2,101 @@
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
-Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array.
+
+Write a function called addTwo that takes in an array and adds two to every 
+value using a for loop. Place the new value in a new array. Return the new 
+array.
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  let addArray = [];
-  for (let i = 0; i < arr.length; i++){
-    addArray.push(arr[i] + 2);
-
+  let newArr = [];
+  for (let i=0; i < arr.length; i++){
+    newArr.push(arr[i] + 2);
   }
-  return addArray;
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
-Write a function named typeNum that, given an array as input, uses filter to return an array containing only the numbers.
+
+Write a function named typeNum that, given an array as input, uses filter to 
+return an array containing only the numbers.
+
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-/**
- *
- * @param {array} arr - numbers and words
- * @returns  {array} just numbers
- */
 const typeNum = (arr) => {
-  const filtArray = arr.filter(element => {
-    return !isNaN(element);
-  });
-  return filtArray;
+  let newArray2 = arr.filter(ele => typeof ele ==='number'
+  );
+
+  return newArray2;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-Write a function named containsAnd that, given an array of strings as input, uses filter to return an array containing only strings that contain 'and' within the string.
+
+Write a function named containsAnd that, given an array of strings as input, 
+uses filter to return an array containing only strings that contain 'and' 
+within the string.
+
 For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  const andArray = arr.filter(element => {
-    return element.includes('and');
+  // let newArray3 = [];
+  // newArray3.push(
+  let newArray3 = arr.filter(ele => ele.includes('and'));
+  // );
 
-  });
-  return andArray;
+  return newArray3;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-Write a function named oddValues that, given an array of integers as input, uses filter to return an array containing only the odd integers.
+
+Write a function named oddValues that, given an array of integers as input, uses 
+filter to return an array containing only the odd integers.
+
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  const oddArray = arr.filter(element => {
-    return !(element%2===0);
-  });
-  return oddArray;
+  let newArray4 = arr.filter(ele => ele % 2);
+  return newArray4;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
-Write a function named notInFirstArray that, given two arrays as input, uses filter to return an array of all the elements in the second array that are not included in the first array.
+
+Write a function named notInFirstArray that, given two arrays as input, uses 
+filter to return an array of all the elements in the second array that are not 
+included in the first array.
+
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  const incArray = arr.filter(element => !forbiddenValues.includes(element)
 
-  );
-  return incArray;
+  // let newArray5 = [];
+  for (let i = 0; i < arr.length; i++){
+    if forbiddenValues[i] === arr
+  // let newArray5 = arr.filter(val)
+  // (ele => ele.includes(forbiddenValues));
+  }
+  return newArray5;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
-Write a function named getBaseStatGreaterThan that, given the snorlaxData, below, and an integer as input, uses filter to return an array containing all stats with a baseStat greater than the integer.
-For example, getBaseStatGreaterThan(snorlaxData.stats, 50) will return an array containing the 'special-defense' and 'special-attack' objects.
+
+Write a function named getBaseStatGreaterThan that, given the snorlaxData, 
+below, and an integer as input, uses filter to return an array containing all 
+stats with a baseStat greater than the integer.
+
+For example, getBaseStatGreaterThan(snorlaxData.stats, 50) will return an array 
+containing the 'special-defense' and 'special-attack' objects.
 ------------------------------------------------------------------------------------------------ */
 
 const snorlaxData = {
@@ -115,8 +136,14 @@ const getBaseStatGreaterThan = (arr, minBaseStat) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
-Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 7. For this function, extend your solution from challenge 7 to only return the name of the stat, rather than the entire stat object.
-For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
+
+Write a function named getStatName that is an extension of your 
+getBaseStatGreaterThan function from challenge 7. For this function, extend your 
+solution from challenge 7 to only return the name of the stat, rather than the 
+entire stat object.
+
+For example, getStatName(snorlaxData.stats, 50) will return 
+['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
@@ -125,7 +152,10 @@ const getStatName = (arr, minBaseStat) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
-Write a function named getCharactersWithoutChildren that, given the array of characters, below, uses filter to return an array of all characters without children.
+
+Write a function named getCharactersWithoutChildren that, given the array of 
+characters, below, uses filter to return an array of all characters without 
+children.
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [
@@ -177,8 +207,13 @@ const getCharactersWithoutChildren = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
-Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
-For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 'odd'].
+
+Write a function named evenOddNumericValues that, given an array as input, uses 
+filter to remove any non-numeric values, then uses map to generate a new array 
+containing the string 'even' or 'odd', depending on the original value.
+
+For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns 
+['even', 'even', 'odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
@@ -187,9 +222,14 @@ const evenOddNumericValues = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
-All the code below will verify that your functions are working to solve the challenges.
+
+All the code below will verify that your functions are working to solve the 
+challenges.
+
 DO NOT CHANGE any of the below code.
+
 Run your tests from the console: jest challenges-08.test.js
+
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
