@@ -43,7 +43,13 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  // let newArray3 = [];
+  // newArray3.push(
+  let newArray3 = arr.filter(ele => ele.includes('and'));
+  // );
+
+  return newArray3;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,7 +62,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let newArray4 = arr.filter(ele => ele % 2);
+  return newArray4;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +77,15 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+
+  // let newArray5 = [];
+  for (let i = 0; i < arr.length; i++){
+    if forbiddenValues[i] === arr
+  // let newArray5 = arr.filter(val)
+  // (ele => ele.includes(forbiddenValues));
+  }
+  return newArray5;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -232,7 +247,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return an array of strings containing the word and', () => {
     expect(containsAnd(['panda', 'ran', 'and'])).toStrictEqual(['panda', 'and']);
     expect(containsAnd(['banana','bob','xyz'])).toStrictEqual([]);
@@ -241,7 +256,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return an array containing only odd integers', () => {
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([1, 3, 5, 7, 9]);
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).length).toStrictEqual(5);
@@ -250,7 +265,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   const firstNums = [1, 2, 3];
   const secondNums = [1, 2, 3, 4];
 
