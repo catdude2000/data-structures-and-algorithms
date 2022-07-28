@@ -82,16 +82,6 @@ const notInFirstArray = (forbiddenValues, arr) => {
   });
   return finArr;
 
-
-
-  // let newArray5 = [];
-  // for (let i = 0; i < arr.length; i++){
-  //   if forbiddenValues[i] === arr
-  // let newArray5 = arr.filter(val)
-  // (ele => ele.includes(forbiddenValues));
-  // }
-  // return newArray5;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +127,8 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+  console.log(arr, minBaseStat, 'arr and minbasestat');
+  return arr.filter(element => element.baseStat > minBaseStat);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -295,7 +286,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an array containing the stats that are greater than the input', () => {
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([ { stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 } ]);
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75).length).toStrictEqual(1);
