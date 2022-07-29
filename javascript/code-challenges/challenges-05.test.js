@@ -12,11 +12,12 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  console.log(people.lastName);
-  return people.map((person) => {
-    return `${person.firstName} ${person.lastName}`;
+  return people.map(function(person) {
+    let fullName =person.firstName + ' ' + person.lastName;
+    return fullName;
   });
-
+  
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,8 +28,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  return arr.reduce((val1, val2) => val1 + val2, 0);
-
+  let newArr2 = arr.reduce((val, val2) =>
+    val + val2, 0
+  );
+  return newArr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,10 +47,9 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-
-  return arr.reduce((a, b) =>
-    a + b.purchasePrice
-  , 0);
+  return arr.reduce((value, value2) => 
+    value + value2.purchasePrice, 0
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,8 +61,9 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // arr.reduce((a, b) => (b === a + 1 : a), 0);
-  // Solution code here...
+  return arr.reduce((a, b) => {
+    
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,11 +123,7 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-
-  return arr.map((person) => {
-    return `${person.name}`;
-  });
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,11 +135,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  const array = str.split(''); //??
-  const reversed = array.reduce((rev, char) => {
-    return char + rev;
-  }, '');
-  return reversed;
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -296,7 +291,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should convert object to full name string', () => {
 
     const people = [{ firstName: 'Jane', lastName: 'Doe' }, { firstName: 'James', lastName: 'Bond' }];
@@ -306,7 +301,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
@@ -314,14 +309,14 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
     expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the length of the array', () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
