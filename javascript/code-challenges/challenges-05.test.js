@@ -61,9 +61,7 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  return arr.reduce((a, b) => {
-    
-  }, 0);
+  return arr.reduce((a, b) => b ? a + 1 : a, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,6 +121,12 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+  let newArr5 = [arr[0].name, arr[1].name];
+  arr.reduce((a, b) => { a ? b : newArr5.push(b.name);
+  });
+  // newArr5.push(arrEle);
+  console.log(newArr5, 'newarr5');
+  return newArr5;
   // Solution code here...
 };
 
@@ -135,6 +139,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
+  const array = str.split(''); //??
+  const reversed = array.reduce((rev, char) => {
+    return char + rev;
+  }, '');
+  return reversed;
+  // return str.reduce((a, b) => b + a, 0);
   // Solution code here...
 };
 
@@ -322,14 +332,14 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array continaing the names of the characters', () => {
     expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
